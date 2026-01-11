@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-bg: #0a0a0a;
+  --secondary-bg: #1a1a1a;
+  --accent-color: #00ff88;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0a0;
+  --grid-color: #2a2a2a;
+  --shadow: rgba(0, 255, 136, 0.3);
+
+  /* Tetris colors inspired */
+  --tetris-cyan: #00f0f0;
+  --tetris-yellow: #f0f000;
+  --tetris-purple: #a000f0;
+  --tetris-green: #00f000;
+  --tetris-red: #f00000;
+  --tetris-blue: #0000f0;
+  --tetris-orange: #f0a000;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-bg);
+  color: var(--text-primary);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Prevent pull-to-refresh and overscroll */
+html, body {
+  overscroll-behavior: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}

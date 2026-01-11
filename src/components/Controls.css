@@ -1,0 +1,101 @@
+.controls {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 0;
+  padding: 15px;
+}
+
+.controls-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.controls-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.control-btn {
+  background: var(--secondary-bg);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 24px;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2),
+              inset 0 0 20px rgba(0, 0, 0, 0.3);
+  min-width: 60px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:active {
+  background: var(--accent-color);
+  color: var(--primary-bg);
+  box-shadow: 0 2px 8px rgba(0, 255, 136, 0.4),
+              inset 0 0 15px rgba(0, 0, 0, 0.5);
+  transform: translateY(2px);
+}
+
+.control-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--grid-color);
+  color: var(--grid-color);
+}
+
+.arrow-btn {
+  flex: 1;
+}
+
+.drop-btn {
+  flex: 1;
+  background: linear-gradient(135deg, var(--secondary-bg) 0%, rgba(0, 255, 136, 0.1) 100%);
+}
+
+.rotate-btn {
+  flex: 1;
+}
+
+.pause-btn {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .controls {
+    max-width: 300px;
+    padding: 10px;
+  }
+
+  .control-btn {
+    font-size: 20px;
+    padding: 12px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .controls {
+    margin-top: 10px;
+  }
+
+  .control-btn {
+    padding: 10px;
+    min-width: 45px;
+    min-height: 45px;
+    font-size: 18px;
+  }
+}
